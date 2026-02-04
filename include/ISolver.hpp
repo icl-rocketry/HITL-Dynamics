@@ -1,9 +1,16 @@
 #pragma once
+
 #include "State.hpp"
 
-class ISolver {
+class ISolver
+{
 public:
     virtual ~ISolver() = default;
 
-    virtual State Step(const State& current, double dt) = 0;
+    // Performs one integration step using a precomputed derivative
+    virtual State Step(
+        const State& current,
+        const State& derivative,
+        double dt) const = 0;
 };
+
