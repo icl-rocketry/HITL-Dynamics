@@ -23,8 +23,8 @@ void DragFromFile::readTable(const string& filename)
         return;
     }
         
-    Mach.clear();
-    Cd.clear();
+    mach.clear();
+    cd.clear();
         
     double Mach_data;
     double Cd_data;
@@ -32,11 +32,11 @@ void DragFromFile::readTable(const string& filename)
         
     while (vMyFile >> Mach_data >> comma >> Cd_data)
     {
-        Mach.push_back(Mach_data);
-        Cd.push_back(Cd_data);
+        mach.push_back(Mach_data);
+        cd.push_back(Cd_data);
     }
 
-    auto range = minmax_element(Mach.begin(), Mach.end());
+    auto range = minmax_element(mach.begin(), mach.end());
     MinMach = *range.first;
     MaxMach = *range.second;
     vMyFile.close();
@@ -44,17 +44,17 @@ void DragFromFile::readTable(const string& filename)
 
 double DragFromFile::interpolateCD(double MachInput) const
 {
-    if (Mach.empty()) return 0.0;
+    if (mach.empty()) return 0.0;
         
-    for (size_t i = 0; i < Mach.size() - 1; i++)
+    for (size_t i = 0; i < mach.size() - 1; i++)
     {
-    if (MachInput >= Mach[i] && MachInput <= Mach[i+1])
+    if (MachInput >= mach[i] && MachInput <= mach[i+1])
         {
-            return Cd[i] + (Cd[i+1] - Cd[i]) * (MachInput - Mach[i]) / (Mach[i+1] - Mach[i]);
+            return cd[i] + (cd[i+1] - cd[i]) * (MachInput - mach[i]) / (mach[i+1] - mach[i]);
         }
     }
         
-    return Cd.back();
+    return cd.back();
 }
 
 double DragFromFile::GetmaxMach() const
@@ -96,4 +96,3 @@ Eigen::Vector3d DragFromFile::GetMomentCoefficients(const State&) const
 {
     return Eigen::Vector3d::Zero();
 }
-
