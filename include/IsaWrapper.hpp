@@ -13,6 +13,8 @@ public:
 
 	double GetTemperature (double alt) const;
 
-	Eigen::Vector3d GetGravityVector(const Eigen::Vector3d& position) const override;
-    Eigen::Vector3d GetWind(double altitude) const override;
+	virtual Eigen::Vector3d GetGravityVector(const Eigen::Vector3d& position) const override;
+    
+    // Returns wind velocity vector (e.g., for crosswind calculations)
+    virtual Eigen::Vector3d GetWind(double altitude) const override;
 };

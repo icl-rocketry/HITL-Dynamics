@@ -1,12 +1,11 @@
-#include "IsaWrapper.hpp"
+#include "../../include/IsaWrapper.hpp"
 #include <iostream>
 #include <cmath>
+#include <Eigen/Dense>
 
 
 
-
-
-double GetTemperature (double alt){
+/*double IsaWrapper::GetTemperature (double alt){
 	auto test = LouiEriksson::ISA<double>::TrySolve(alt);
 
 	if (test.has_value()){
@@ -15,7 +14,8 @@ double GetTemperature (double alt){
 		throw std::out_of_range("Error: Altitude out of bounds.");
 	}
 };
-double GetDensity (double alt){
+*/
+double IsaWrapper::GetDensity (double alt) const{
 	auto test = LouiEriksson::ISA<double>::TrySolve(alt);
 
 	if (test.has_value()){
@@ -24,7 +24,7 @@ double GetDensity (double alt){
 		throw std::out_of_range("Error: Altitude out of bounds.");
 	}
 };
-double GetPressure (double alt){
+double IsaWrapper::GetPressure (double alt) const{
 	auto test = LouiEriksson::ISA<double>::TrySolve(alt);
 
 	if (test.has_value()){
@@ -33,7 +33,7 @@ double GetPressure (double alt){
 		throw std::out_of_range("Error: Altitude out of bounds.");
 	}
 };
-double GetSpeedOfSound (double alt) {
+double IsaWrapper::GetSpeedOfSound (double alt) const{
 	auto test = LouiEriksson::ISA<double>::TrySolve(alt);
 
 	if (test.has_value()){
@@ -42,6 +42,20 @@ double GetSpeedOfSound (double alt) {
 	} else {
 		throw std::out_of_range("Error: Altitude out of bounds.");
 	}
+};
+
+
+Eigen::Vector3d IsaWrapper::GetGravityVector(const Eigen::Vector3d& position) const {
+	Eigen::Vector3d colVec;
+    colVec << 0, 0, 0; //not needed so set to 0
+
+	return colVec;
+};
+
+Eigen::Vector3d IsaWrapper::GetWind(double altitude) const {
+		Eigen::Vector3d colVec;
+    colVec << 0, 0,0; //not needed so set to 0
+	return colVec;
 };
 
 

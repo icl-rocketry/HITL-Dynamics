@@ -1,6 +1,8 @@
 #ifndef LOUIERIKSSON_ISA_HPP
 #define LOUIERIKSSON_ISA_HPP
 
+#include <iostream>
+#include <ostream>
 #include <array>
 #include <cmath>
 #include <cstddef>
