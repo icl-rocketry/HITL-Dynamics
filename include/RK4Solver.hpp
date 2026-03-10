@@ -2,7 +2,7 @@
 
 #include "ISolver.hpp"
 
-class EulerSolver : public ISolver
+class RK4Solver : public ISolver
 {
 public:
     void Step(

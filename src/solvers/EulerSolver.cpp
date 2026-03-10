@@ -1,9 +1,14 @@
 #include "EulerSolver.hpp"
 
-State EulerSolver::Step(
-    const State& current,
-    const State& derivative,
+void EulerSolver::Step(
+    IRocket& rocket,
+    State& state,
     double dt) const
 {
-    return current + derivative * dt;
+    Eigen::VectorXd dx = rocket.GetDerivatives(state);
+
+    State derivative(state.size());
+    derivative.data = dx;
+
+    state = state + derivative * dt;
 }

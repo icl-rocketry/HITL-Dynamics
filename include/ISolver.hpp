@@ -1,5 +1,6 @@
 #pragma once
 
+#include "IRocket.hpp"
 #include "State.hpp"
 
 class ISolver
@@ -7,10 +8,9 @@ class ISolver
 public:
     virtual ~ISolver() = default;
 
-    // Performs one integration step using a precomputed derivative
-    virtual State Step(
-        const State& current,
-        const State& derivative,
+    virtual void Step(
+        IRocket& rocket,
+        State& state,
         double dt) const = 0;
 };
 
