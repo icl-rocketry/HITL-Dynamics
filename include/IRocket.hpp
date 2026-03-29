@@ -1,4 +1,6 @@
 #pragma once
+
+#include <Eigen/Dense>
 #include "State.hpp"
 
 class IRocket {

@@ -1,10 +1,16 @@
 #pragma once
+
 #include "IRocket.hpp"
 #include "State.hpp"
 
-class ISolver {
+class ISolver
+{
 public:
     virtual ~ISolver() = default;
 
-    virtual State Step(IRocket& rocket, const State& current, double dt) = 0;
+    virtual void Step(
+        IRocket& rocket,
+        State& state,
+        double dt) const = 0;
 };
+
