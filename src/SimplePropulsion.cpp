@@ -1,4 +1,4 @@
-#include "IPropulsion.hpp"
+#include "SimplePropulsion.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -8,15 +8,15 @@
 #include <cmath>
 using namespace std;
 
-IPropulsion::IPropulsion() = default;
+SimplePropulsion::SimplePropulsion() = default;
 
-IPropulsion::IPropulsion(const string& filename)
+SimplePropulsion::SimplePropulsion(const string& filename)
     {
         readtable(filename);
         GetThrustTable();
     }
 
-void IPropulsion::readtable(const string& filename)
+void SimplePropulsion::readtable(const string& filename)
     {
         ifstream vMyFile(filename);
         if (!vMyFile.good())
@@ -62,7 +62,7 @@ void IPropulsion::readtable(const string& filename)
     }
 
 
-    void IPropulsion::GetThrustTable()
+    void SimplePropulsion::GetThrustTable()
     {
         if (time.empty() || thrust.empty())
             return;
@@ -110,7 +110,7 @@ void IPropulsion::readtable(const string& filename)
     }
 
 
-    double IPropulsion::GetThrust()
+    double SimplePropulsion::GetThrust()
     {
         if (pre_cal_Thrust.empty())
             return 0.0;
@@ -122,7 +122,7 @@ void IPropulsion::readtable(const string& filename)
     }
 
 
-    double IPropulsion::calculate_total_impulse() const
+    double SimplePropulsion::calculate_total_impulse() const
     {
         if (pre_cal_Thrust.empty())
             return 0.0;
@@ -139,20 +139,20 @@ void IPropulsion::readtable(const string& filename)
     }
 
 
-    double IPropulsion::GetISP(double total_propmass)
+    double SimplePropulsion::GetISP(double total_propmass) 
     {
         return calculate_total_impulse() / (total_propmass * g);
     }
 
     //ISP = GetISP(total_propmass);
 
-    void IPropulsion::SetInitialMass(double totalmass)
+    void SimplePropulsion::SetInitialMass(double totalmass)
     {   
         current_mass = totalmass;
     }
 
 
-    double IPropulsion::Get_PropMass(double total_propmass, double current_thrust)
+    double SimplePropulsion::Get_PropMass(double total_propmass, double current_thrust) 
     {
         double ISP = GetISP(total_propmass);
         double PropMass_flow = current_thrust / (ISP * g);
@@ -167,7 +167,7 @@ void IPropulsion::readtable(const string& filename)
     }
 
 
-    double IPropulsion::Get_Drymass(double dry_mass)
+    double SimplePropulsion::Get_Drymass(double dry_mass) 
     {
         return dry_mass;
     }
