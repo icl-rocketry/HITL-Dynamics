@@ -16,6 +16,7 @@ SimplePropulsion::SimplePropulsion(const string& filename)
         GetThrustTable();
     }
 
+    
 void SimplePropulsion::readtable(const string& filename)
     {
         ifstream vMyFile(filename);
@@ -144,7 +145,6 @@ void SimplePropulsion::readtable(const string& filename)
         return calculate_total_impulse() / (total_propmass * g);
     }
 
-    //ISP = GetISP(total_propmass);
 
     void SimplePropulsion::SetInitialMass(double totalmass)
     {   
@@ -165,7 +165,7 @@ void SimplePropulsion::readtable(const string& filename)
         
         return current_mass;
     }
-
+    
 
     double SimplePropulsion::Get_Drymass(double dry_mass) 
     {

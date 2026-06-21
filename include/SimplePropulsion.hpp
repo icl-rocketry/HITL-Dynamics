@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 constexpr double g = 9.81;
+constexpr double dt = 0.01;
 using namespace std;
 
 class SimplePropulsion : public IPropulsion {
@@ -12,7 +13,6 @@ private:
     vector<double> thrust;
     vector<double> pre_cal_Thrust;
     size_t index = 0;
-    double dt = 0.01;
     double current_mass = 0.0;
 
     void readtable(const string& filename);

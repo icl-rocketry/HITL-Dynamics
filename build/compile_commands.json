@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/build",
+  "command": "/usr/bin/clang++  -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include/eigen-5.0.0 -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -g -O0 -o CMakeFiles/HITL_Dynamics.dir/main.cpp.o -c /Users/sunwenhui/Desktop/Github/HITL-Dynamics/main.cpp",
+  "file": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/main.cpp",
+  "output": "CMakeFiles/HITL_Dynamics.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/build",
+  "command": "/usr/bin/clang++  -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include/eigen-5.0.0 -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -g -O0 -o CMakeFiles/HITL_Dynamics.dir/src/OneDRocket.cpp.o -c /Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/OneDRocket.cpp",
+  "file": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/OneDRocket.cpp",
+  "output": "CMakeFiles/HITL_Dynamics.dir/src/OneDRocket.cpp.o"
+},
+{
+  "directory": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/build",
+  "command": "/usr/bin/clang++  -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include/eigen-5.0.0 -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -g -O0 -o CMakeFiles/HITL_Dynamics.dir/src/SimplePropulsion.cpp.o -c /Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/SimplePropulsion.cpp",
+  "file": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/SimplePropulsion.cpp",
+  "output": "CMakeFiles/HITL_Dynamics.dir/src/SimplePropulsion.cpp.o"
+},
+{
+  "directory": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/build",
+  "command": "/usr/bin/clang++  -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include/eigen-5.0.0 -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -g -O0 -o CMakeFiles/HITL_Dynamics.dir/src/aerodynamics/DragFromFile.cpp.o -c /Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/aerodynamics/DragFromFile.cpp",
+  "file": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/aerodynamics/DragFromFile.cpp",
+  "output": "CMakeFiles/HITL_Dynamics.dir/src/aerodynamics/DragFromFile.cpp.o"
+},
+{
+  "directory": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/build",
+  "command": "/usr/bin/clang++  -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include/eigen-5.0.0 -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -g -O0 -o CMakeFiles/HITL_Dynamics.dir/src/environment/IsaEnvironment.cpp.o -c /Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/environment/IsaEnvironment.cpp",
+  "file": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/environment/IsaEnvironment.cpp",
+  "output": "CMakeFiles/HITL_Dynamics.dir/src/environment/IsaEnvironment.cpp.o"
+},
+{
+  "directory": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/build",
+  "command": "/usr/bin/clang++  -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include/eigen-5.0.0 -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -g -O0 -o CMakeFiles/HITL_Dynamics.dir/src/solvers/EulerSolver.cpp.o -c /Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/solvers/EulerSolver.cpp",
+  "file": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/solvers/EulerSolver.cpp",
+  "output": "CMakeFiles/HITL_Dynamics.dir/src/solvers/EulerSolver.cpp.o"
+},
+{
+  "directory": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/build",
+  "command": "/usr/bin/clang++  -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include -I/Users/sunwenhui/Desktop/Github/HITL-Dynamics/include/eigen-5.0.0 -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -g -O0 -o CMakeFiles/HITL_Dynamics.dir/src/solvers/RK4Solver.cpp.o -c /Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/solvers/RK4Solver.cpp",
+  "file": "/Users/sunwenhui/Desktop/Github/HITL-Dynamics/src/solvers/RK4Solver.cpp",
+  "output": "CMakeFiles/HITL_Dynamics.dir/src/solvers/RK4Solver.cpp.o"
+}
+]
